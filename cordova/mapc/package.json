@@ -1,6 +1,6 @@
 {
   "name": "com.chaos.map",
-  "displayName": "GaedcMap",
+  "displayName": "Map",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
@@ -25,7 +25,9 @@
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "App uses geolocation to determine where you are."
       },
-      "cordova-plugin-device-orientation": {}
+      "cordova-plugin-device-orientation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "App uses geolocation to determine where you are."
+      }
     }
   },
   "dependencies": {

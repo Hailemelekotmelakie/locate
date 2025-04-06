@@ -30,7 +30,7 @@ The Locate Project is a comprehensive solution that includes a Cordova-based mob
 
 ### Running the Cordova Mobile Application
 
-1. Navigate to the `cordova/gaedc-map` directory.
+1. Navigate to the `cordova/mapc` directory.
 2. Install the necessary plugins and platforms:
     ```sh
     cordova platform add android
@@ -55,7 +55,7 @@ The Locate Project is a comprehensive solution that includes a Cordova-based mob
 
 ## License
 
-This project is licensed under the Apache License, Version 2.0. See the [LICENSE](cordova/gaedc-map/LICENSE) file for more details.
+This project is licensed under the Apache License, Version 2.0. See the [LICENSE](cordova/mapc/LICENSE) file for more details.
 
 ## Authors
 
