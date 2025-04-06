@@ -8,7 +8,7 @@ import { useAppSelector } from '../app/hooks'
 import { getDirectionAndAngle } from '../utils'
 import protracter from "../assets/img.png"
 import Compass from '../components/Compass'
-
+import ChangePasswordModal from './Modal'
 
 class DebugCoords extends L.TileLayer {
 
@@ -38,15 +38,15 @@ const DebugCoordsLayer = (props: DebugCoordsProps, context: any) => {
 
 const DebugCoordsLayerComponent = createLayerComponent(DebugCoordsLayer/* , DebugCoordsLayerUpdate */)
 
-
-
 const App = () => {
 
   const holeSate = useAppSelector((state) => state.map)
   const center = useAppSelector((state) => state.map.userLocation)
 
 
-  return (
+  return (<>
+  {/* Add one icon on the above right corner and whenever it gets clicked it should open a big modal over map that will accept new and old password and confirm password with one button  */}
+<ChangePasswordModal />
     <MapContainer
       center={center as L.LatLng}
       zoom={0}
@@ -102,7 +102,10 @@ const App = () => {
         } zIndex={40} />
       <Compass />
     </MapContainer>
+    </>
   )
 }
 
 export default App
+
+ 

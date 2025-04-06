@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Eye, EyeOff } from 'lucide-react'; // optional icon lib
 import { useAuth } from "@/auth/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { getFromLocalStorage } from "../utils/LocalStorageHandler"; // Adjusted the path to match the relative location
 
 const Login = () => {
-    const staticPassword = "12345678";
+
+    const staticPassword = getFromLocalStorage();
     const [showPassword, setShowPassword] = useState(false);
     const [password, setPassword] = useState<string>("");
     const [error, setError] = useState("");

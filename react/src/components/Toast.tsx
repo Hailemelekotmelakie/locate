@@ -18,7 +18,7 @@ const Notification: React.FC<NotificationProps> = ({ message, type = "success", 
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-[9999]">
+    <div className="fixed bottom-4 right-4 z-[9998]">
       <div className={`flex items-center justify-between w-full max-w-sm p-4 mb-4 text-sm border rounded-lg shadow ${typeStyles[type]} animate-fade-in-down`}>
         <span>{message}</span>
         <button onClick={onClose} className="ml-2 text-gray-500 hover:text-gray-700">
