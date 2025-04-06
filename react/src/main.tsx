@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import RootRoute from './RootRoute.tsx'
 import './index.css'
 import { Provider } from 'react-redux'
 import { store } from './app/store.ts'
 
 import markerIcon from "../node_modules/leaflet/dist/images/marker-icon.png";
 import L from "leaflet";
+import 'leaflet/dist/leaflet.css'
+
 
 L.Marker.prototype.setIcon(L.icon({
   iconUrl: markerIcon,
@@ -22,7 +24,7 @@ L.Marker.prototype.setIcon(L.icon({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <RootRoute />
     </Provider>
   </React.StrictMode>,
 )

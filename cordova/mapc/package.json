@@ -2,6 +2,7 @@
   "name": "com.chaos.map",
   "displayName": "Map",
   "version": "1.0.0",
+  "homepage": "./",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {

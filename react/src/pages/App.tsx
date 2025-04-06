@@ -1,19 +1,13 @@
 import { ImageOverlay, MapContainer, Polyline, Tooltip } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
 
 import L, { polyline } from 'leaflet'
 import { createLayerComponent } from '@react-leaflet/core'
-import Tools from './components/Tools'
-import MapMarkers from './features/map/MapMarkers'
-import { useAppSelector } from './app/hooks'
-import { getDirectionAndAngle } from './utils'
-import protracter from "./assets/img.png"
-import Compass from './components/Compass'
-
-
-
-
-
+import Tools from '../components/Tools'
+import MapMarkers from '../features/map/MapMarkers'
+import { useAppSelector } from '../app/hooks'
+import { getDirectionAndAngle } from '../utils'
+import protracter from "../assets/img.png"
+import Compass from '../components/Compass'
 
 
 class DebugCoords extends L.TileLayer {

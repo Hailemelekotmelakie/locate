@@ -1,8 +1,12 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
-
+import Notification from "./Toast";
+ 
 const Compass = () => {
   const [compassValue, setCompassValue] = useState<string>("0");
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const [toastMessage, setToastMessage] = useState<string>("");
+
 
   useEffect(() => {
     // Function to handle successful retrieval of compass heading
@@ -12,7 +16,9 @@ const Compass = () => {
 
     // Function to handle compass errors
     function onError(compassError: any) {
-      alert("Compass error: " + compassError.code);
+      // alert(`Compass error: ${compassError.code}`);
+      setToastMessage(`Compass error: ${compassError.code}`);
+      setModalOpen(true);
     }
 
     // Options for the compass
@@ -27,7 +33,8 @@ const Compass = () => {
       var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
     } else {
       // Handle the case where compass is not available
-      alert("Compass is not supported on this device.");
+      setToastMessage("Compass is not supported on this device.");
+      setModalOpen(true);
     }
     // Cleanup function to clear the compass watch
     return () => {
@@ -38,7 +45,10 @@ const Compass = () => {
     };
   }, []);
 
-  return (
+  return (<> 
+    {isModalOpen && (
+      <Notification message={toastMessage} type="error" onClose={() => setModalOpen(false)} />
+     )}
     <div className="fixed top-28 right-1 z-[9999]">
       <div className="w-20 h-20 rounded-full border border-red-800 relative">
         <p className="left-1/2 -bottom-[10%]">
@@ -60,7 +70,8 @@ const Compass = () => {
         <span className="absolute bottom-0 left-2/4">S</span>
         <span className="absolute top-1/3 left-0">W</span>
       </div>
-    </div>
+    </div>  
+    </>
   );
 };
 
