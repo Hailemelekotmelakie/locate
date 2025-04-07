@@ -1,5 +1,5 @@
 const passcode = 'passcode'
-const initial = 'fIy#71.00.02.'
+const initial = 'Z132017'
 
 
 export const putToLocalStorage = ( value:string) => {
