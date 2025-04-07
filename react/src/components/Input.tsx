@@ -21,8 +21,6 @@ const Input = () => {
   const makeAllEmpty = () => {
     setName("");
     setCoord("");
-    setMissLat("");
-    setMissLng("");
   };
 
   const handleClick = () => {
