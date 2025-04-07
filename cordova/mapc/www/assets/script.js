@@ -24999,7 +24999,7 @@ const dP = () => {
         children: [
           i && z.jsx(gP, { message: s, type: "error", onClose: () => r(!1) }),
           z.jsxs("div", {
-            className: "fixed top-28 right-1 z-[9999]",
+            className: "fixed top-28 right-1 z-[9997]",
             children: [
               z.jsx("p", {
                 className: "text-center text-lg p-3",

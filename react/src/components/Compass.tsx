@@ -53,7 +53,7 @@ const Compass = () => {
           onClose={() => setModalOpen(false)}
         />
       )}
-      <div className="fixed top-28 right-1 z-[9999]">
+      <div className="fixed top-28 right-1 z-[9997]">
         <p className="text-center text-lg p-3">
           {Number(compassValue).toFixed(2)}
         </p>
